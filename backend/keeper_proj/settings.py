@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'keeper_auth',
+    'contact_app',
 ]
 
 MIDDLEWARE = [
