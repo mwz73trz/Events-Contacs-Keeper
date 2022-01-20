@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
+import Events from "./routes/events";
+import Contacts from "./routes/contacts";
 import UserContext from "./contexts/UserContext";
 import { getLoggedInUser, login } from "./api/UserAPI";
 
@@ -61,7 +63,10 @@ function App() {
               element={
                 <HomePage isLoggedIn={isLoggedIn} handleLogout={handleLogout} />
               }
-            />
+            >
+              <Route path="/events" element={<Events />} />
+              <Route path="/contacts" element={<Contacts />} />
+            </Route>
             <Route
               path="/login"
               element={

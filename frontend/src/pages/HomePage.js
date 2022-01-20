@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import UserContext from "../contexts/UserContext";
 
 const App = ({ isLoggedIn, handleLogout }) => {
@@ -31,6 +31,7 @@ const App = ({ isLoggedIn, handleLogout }) => {
       ) : (
         <button onClick={handleLogout}>Logout</button>
       )}
+      <Outlet />
     </div>
   );
 };
